@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <script src="JS/example.js"></script> -->
+</head>
+<body>
+    <h1>HelloWorld!</h1>
+    <!-- 스크립트 외부 주석 --> 
+    <script>
+        /* 스크립트 내부 주석 */ 
+        // 스크립트 내부 주석
+        
+        var age = prompt("당신의 나이는??","0");
+        if(age >= 20){
+            alert("성인입니다");
+            document.write("당신은 성인입니다.");
+        }else{
+            var confirmResult = confirm("미성년자입니다.");
+            document.write(confirmResult ,"당신은 미성년자입니다.<br>");
+        }
+
+        var number1 = 100;
+        var string1 = "kor";
+        document.write(typeof number1, "<br>");
+        document.write(typeof string1, "<br>");
+
+        let name = "홍길동";
+        let str = `내 이름은 ${name} 입니다. <br>
+        제 나이는 ${age} 입니다. `; // 백틱 주의
+        document.write(str , "<br>");
+
+        var num1 = 100;
+        var numString1 = "100";
+        document.write(num1 == numString1, "<br>"); // 타입관계없이 비교 true
+        document.write(num1 === numString1, "<br>"); // 타입이 다르면 false
+
+        var result1 = 100 > 50 ? "참입니다" : "거짓입니다"; // 삼항 조건 연산자
+        document.write(result1, "<br>");
+
+
+        //자바의 향상된 for 문과 비슷한 문법
+        var arr = [10, 20, 30]; // int[] arr = [10, 20, 30];
+        for(var i of arr){
+            document.write(i);
+        }
+    </script>
+</body>
+</html>
