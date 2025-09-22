@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title> 선택자 </title>  
+<script src="js/jquery.js"></script>
+<script>
+$(function(){
+	$(".wrap_1 p:eq(0)").text("내용1");
+	$(".wrap_1 p.active").removeClass("active").addClass("on");
+	$(".wrap_1 p a").attr({
+      "href" : "https://www.naver.com",
+	  "target" : "_blank"
+    });
+	$(".wrap_1 input").val("korea");
+	$("<p>Before</p>").insertBefore(".wrap_2 p:eq(0)");
+	$(".wrap_2 p:eq(1)").after("<p>After</P>");
+	$(".wrap_3 p").wrapInner("<strong />");
+});
+</script>
+</head>
+<body>
+	<div class="wrap_1">
+		<p>텍스트1</p> <!-- 내용1로 변경-->
+		<p class="active">내용2</p> <!-- 클래스를 on 클래스로 변경-->
+		<p><a href="#">네이버</a></p> <!--하이퍼링크변경-->
+		<p>
+				<input type="text" value="Hello"> <!-- hello를 korea로 변경-->
+		</p>
+	</div>
+	<div class="wrap_2"> <!-- 내용 5 앞에 before 추가 -->
+		<p>내용5</p> <!--5랑 6사이에 after추가-->
+		<p>내용6</p>
+	</div>
+	<div class="wrap_3">
+		<div>
+						<p>내용7</p>
+						<p>내용8</p> <!--h태그변경하기-->
+		</div>
+	</div>
+</body>
+</html>
