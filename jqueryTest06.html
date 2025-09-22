@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <script src="JS/jquery.js"></script>
+    <script>
+        $(function(){
+            $("#menu li:first").css("background-color","red");
+            $("#menu li:last").css("background-color","green");
+
+            // Index 로 0,1,2.... 짝수 even , 홀수 odd
+            $("#menu li:even").css("background-color","pink");
+            $("#menu li:odd").css("background-color","yellow");
+            $("#menu2 li").eq(2).css("background-color","yellow");
+            //해당 인덱스 (eq) 요소 선택
+            $("#menu2 li:lt(2)").css("background-color","green");
+            // 해당 인덱스(2) 보다 작은 요소 선택
+            $("#menu2 li:gt(2)").css("background-color","pink");
+            // 해당 인덱스(2) 보다 큰 요소 선택
+        });
+    </script>
+</head>
+<body>
+    <h1> 탐색 선택자 1</h1>
+    <ul id="menu">
+        <li>내용1</li>
+        <li>내용2</li>
+        <li>내용3</li>
+        <li>내용4</li>
+    </ul>
+    <h1> 탐색 선택자 2</h1>
+    <ul id="menu2">
+        <li>내용5</li>
+        <li>내용6</li>
+        <li>내용7</li>
+        <li>내용8</li>
+    </ul>
+</body>
+</html>

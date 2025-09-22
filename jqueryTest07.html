@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <script src="JS/jquery.js"></script>
+    <script>
+        $(function(){
+            $("li:first-of-type").css({"background-color":"red"});
+            $("li:last-of-type").css({"background-color":"skyblue"});
+            $("#menu1 li:nth-child(1)").css({"background-color":"pink"});
+            $("#menu1 li:nth-child(2n)").css({"background-color":"green"});
+            //2의 배수 선택
+            $("#menu2 li:nth-last-child(2n)").css({"background-color":"gold"});
+            //메뉴2 마지막 위치에서 2의 배수 섡택
+            $("#menu1 li").slice(1,3).css("border","2px dashed brown");
+            //인덱스 1,2만 선택
+            $("li:only-child").css("border","2px dashed gray");
+            //자식 태그가 하나만 존재하는 경우 적용
+        });
+    </script>
+</head>
+<body>
+    <h1> 탐색 선택자</h1>
+    <ul>
+        <li>내용1</li>
+        <li>내용2</li>
+        <li>내용3</li>
+        <li>내용4</li>
+    </ul>
+    <ul>
+        <li>내용5</li>
+        <li>내용6</li>
+        <li>내용7</li>
+        <li>내용8</li>
+    </ul>
+    <h1> 탐색 선택자2</h1>
+    <ul id="menu1">
+        <li>내용9</li>
+        <li>내용10</li>
+        <li>내용11</li>
+        <li>내용12</li>
+    </ul>
+    <ul id="menu2">
+        <li>내용13</li>
+        <li>내용14</li>
+        <li>내용15</li>
+        <li>내용16</li>
+    </ul>
+    <ul id="menu3">
+        <li>내용17</li>
+    </ul>
+</body>
+</html>
