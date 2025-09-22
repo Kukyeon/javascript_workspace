@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="JS/jquery.js"></script>
+    <script>
+        $(function(){
+            $(".txt2").prev().css("border","2px dashed red");
+            // txt2클래스 이전 내용에 적용
+            $(".txt2 + p").css("border","2px dashed blue");
+        //또는 $(".txt2").next().css("border","2px dashed blue");
+        // txt2클래스 다음 내용에 적용
+            $(".txt2").next().next().css("border","2px dashed pink");
+            // 다다음도 적용가능
+            $(".txt6").prevAll().css("border","2px dashed yellow");
+            $(".txt6").nextAll().css("border","2px dashed gray");
+            
+            $(".txt10").siblings().css("border","2px dashed black");
+        });
+    </script>
+</head>
+<body>
+    <div id="wrap">
+        <h1>인접 관계 선택자1</h1>
+        <p>내용 1</p>
+        <p class="txt2">내용 2</p>
+        <p>내용 3</p>
+        <p>내용 4</p>
+    </div>
+    <div id="wrap2">
+        <h1>인접 관계 선택자2</h1>
+        <p>내용 5</p>
+        <p class="txt6">내용 6</p>
+        <p>내용 7</p>
+        <p>내용 8</p>
+    </div>
+    <div id="wrap3">
+        <h1>인접 관계 선택자3</h1>
+        <p>내용 9</p>
+        <p class="txt10">내용 10</p>
+        <p>내용 11</p>
+        <p>내용 12</p>
+    </div>
+</body>
+</html>
