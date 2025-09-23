@@ -6,7 +6,10 @@
 <script src="js/jquery.js"></script>
 <script>
 	$(window).on("scroll",function(){
-
+		var sc_top = $(this).scrollTop(); // 스크롤바 수직 이동 값
+		var sc_left = $(this).scrollLeft(); // 스크롤바 수평 이동 값
+		$(".top").text(sc_top);
+		$(".left").text(sc_left);
 	});
 </script>
 <style>
