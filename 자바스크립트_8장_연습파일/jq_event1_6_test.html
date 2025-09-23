@@ -6,7 +6,20 @@
 <script src="js/jquery.js"></script>
 <script>
 $(function( ) {
-	
+	$(".btn1").on({
+		"mouseover":function(){
+			$(".txt1").css("background-color","red");
+		},
+		"mouseout":function(){
+			$(".txt1").css("background","none");
+		}
+	});
+
+	$(".btn2").hover(function(){ //마우스가 올라왔을때 이벤트
+		$(".txt2").css("background-color","red");
+	}, function(){ // 마우스가 빠져나갔을때 이벤트
+		$(".txt2").css("background","none");
+	})
 });
 </script>
 </head>

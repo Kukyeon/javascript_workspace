@@ -6,7 +6,19 @@
 <script src="js/jquery.js"></script>
 <script>
 $(function( ) {
+	$(".btn1").on("click", function(e){
+		e.preventDefault(); // 이벤트 차단
+		$(".txt1").css("background-color","red");
+	});
 
+	$(".btn2").on("click", function(e){
+		//이벤트차단이 안되서, 클릭시 txt 녹색실행과 동시에 하이퍼링크 적용
+		$(".txt2").css("background-color","green");
+	});
+
+	$(".btn3").on("dblclick", function(e){
+		$(".txt3").css("background-color","blue");
+	});
 });
 </script>
 </head>
