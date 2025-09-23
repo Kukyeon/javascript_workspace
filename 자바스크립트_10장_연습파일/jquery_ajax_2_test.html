@@ -6,7 +6,33 @@
 <script src="js/jquery.js"></script>
 <script>
 $(function() {
+  $.ajax({
+    url:"js/MOCK_DATA.json", // 서버에 데이터 요청 url
+    dataType:"json",
+    success:function(data){
+      if(data.length > 0){ //null값 방지
+        var tb = $("<table />"); // table 태그
 
+        for(var i in data){ // i = index 0~999 까지 총 1000번 반복
+          var $id = data[i].id; // 회원의 id
+          var $first_name = data[i].first_name; // 회원의 first_name
+          var $last_name = data[i].last_name; //회원의 last_name
+          var $email = data[i].email; // 회원의 email
+          var $gender = data[i].gender; // 회원의 gender
+
+          var row = $("<tr />").append(
+            $("<td />").text($id),
+            $("<td />").text($first_name),
+            $("<td />").text($last_name),
+            $("<td />").text($email),
+            $("<td />").text($gender)
+          );
+          tb.append(row); // 테이블태그에 <tr> 태그 넣기
+        };
+        $(".wrap").append(tb);
+      };
+    }
+  });
 });
 </script>
 </head>
